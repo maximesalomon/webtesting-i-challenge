@@ -8,7 +8,7 @@ module.exports = {
 function succeed(item) {
   let enhancement = item.enhancement
   if (enhancement < 20){
-    enhancement + 1
+    ++enhancement
   }
   return { ...item, enhancement };
 }
@@ -21,7 +21,7 @@ function fail(item) {
   } else {
     durability = durability - 10
     if (enhancement >= 17) {
-      enhancement - 1;
+      --enhancement;
     }
   } 
   return { ...item, enhancement, durability };
